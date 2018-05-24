@@ -1,0 +1,12 @@
+enableDebugConsole = 1;
+
+respawn = 3;
+respawnDelay = 9999;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;//Dont respawn on start.
+respawnDialog = 0;
+respawnButton = 0;
+
+class cfgFunctions {
+  #include "grad-permaChoice\cfgFunctions.hpp"
+};
