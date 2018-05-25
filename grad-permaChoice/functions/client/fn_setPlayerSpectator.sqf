@@ -9,3 +9,11 @@
 
 [true] call ace_spectator_fnc_setSpectator; // launch spec
 [player, true] call TFAR_fnc_forceSpectator; // force tfar spec
+
+private _allCuratorUnits = [];
+
+{
+    _allCuratorUnits pushback (getAssignedCuratorUnit _x);
+} forEach allCurators;
+
+[name player] remoteExec ["GRAD_permaChoice_fnc_showNotification", _allCuratorUnits, true];

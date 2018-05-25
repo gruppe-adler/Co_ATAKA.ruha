@@ -4,9 +4,12 @@ class grad_permaChoice {
 		  file = grad-permaChoice\functions\client;
 
       class addEventhandler {preInit = 1;};
+      class addZeusModules;
+      class forceRespawn;
       class onPlayerKilled;
       class onPlayerUnconscious;
       class setPlayerSpectator;
+      class showNotification;
   };
 
 	class server {

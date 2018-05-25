@@ -11,7 +11,7 @@ if _state then {
     */
     "STHud_Draw" call STUI_Canvas_Remove; // remove sthud
 
-    private _controlPosition = 
+    private _controlPosition =
     [
         safeZoneX + (safeZoneW/2) - 0.1,
         safeZoneY + safeZoneH - 0.21,
@@ -19,7 +19,7 @@ if _state then {
         0.2
     ];
 
-    
+
     // workaround for mouseEnter events not firing on picture
     private _mouseOverArea = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscStructuredText",-1];
     _mouseOverArea ctrlSetPosition _controlPosition;
@@ -43,9 +43,9 @@ if _state then {
   	_icon ctrlSetPosition _controlPosition;
   	_icon ctrlSetText "grad-permaChoice\data\dieAndSpectate_def.paa";
     _icon ctrlSetBackgroundColor [0,0,0,0.01];
-    _icon ctrlCommit 0;    
+    _icon ctrlCommit 0;
 
-    
+
 
     /*
     private _rspbutton = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscButton",-1];
@@ -54,7 +54,7 @@ if _state then {
     _rspbutton ctrlSetBackgroundColor [0, 0, 0, 0];
     _rspbutton ctrlCommit 0;
     */
-    
+
 } else {
     //hint "state false";
     "STHud_Draw" call STUI_Canvas_Add;
