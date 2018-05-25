@@ -22,8 +22,7 @@ if (
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     private _spectatorList = missionNameSpace getVariable ["GRAD_permaChoice_spectatorList", []];
-    private _spectator
-  	[] call GRAD_permaChoice_fnc_showNotification;
+  	[str _spectatorList] call GRAD_permaChoice_fnc_showNotification;
 
   }] call Ares_fnc_RegisterCustomModule;
 
