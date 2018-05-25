@@ -1,14 +1,14 @@
+/*
+
+  ripped and modified commy2 code
+
+*/
+
 params ["_unit", "_state"];
 
 if _state then {
     // hint str (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]);
-  	/*
-    _Wasted = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscStructuredText",1930];
-  	_Wasted ctrlSetPosition  [-0.000156274 * safezoneW + safezoneX,0.423 * safezoneH + safezoneY,1.02094 * safezoneW,0.099 * safezoneH];
-  	_Wasted ctrlCommit 0;
-  	_Wasted ctrlSetBackgroundColor [0, 0, 0, 0.9];
-  	_Wasted ctrlSetStructuredText parseText format["<t size='4' color='#FF0000' align = 'center'>Auf Hilfe warten oder:</t>"];
-    */
+
     "STHud_Draw" call STUI_Canvas_Remove; // remove sthud
 
     private _controlPosition =
@@ -44,16 +44,6 @@ if _state then {
   	_icon ctrlSetText "grad-permaChoice\data\dieAndSpectate_def.paa";
     _icon ctrlSetBackgroundColor [0,0,0,0.01];
     _icon ctrlCommit 0;
-
-
-
-    /*
-    private _rspbutton = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscButton",-1];
-    _rspbutton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.533 * safezoneH + safezoneY,0.195937 * safezoneW,0.077 * safezoneH];
-    _rspbutton ctrlSetText "test";
-    _rspbutton ctrlSetBackgroundColor [0, 0, 0, 0];
-    _rspbutton ctrlCommit 0;
-    */
 
 } else {
     //hint "state false";

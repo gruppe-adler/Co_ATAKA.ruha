@@ -7,6 +7,7 @@ class grad_permaChoice {
       class addZeusModules;
       class forceRespawn;
       class onPlayerKilled;
+      class onPlayerRespawn;
       class onPlayerUnconscious;
       class setPlayerSpectator;
       class showNotification;
