@@ -1,16 +1,10 @@
 params ["_vehicle","_isArmy"];
 
 // todo: find right group in afghan police
-_squad = (configFile >> "CfgGroups" >> "West" >> "LOP_AA" >> "Infantry" >> "LOP_AA_Rifle_squad");
+_squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_vdv" >> "rhs_group_rus_vdv_infantry" >> "rhs_group_rus_vdv_infantry_squad");
 
 
-
-if (_isArmy) then {
-	// todo: find right group in afghan army
-	_squad = (configfile >> "CfgGroups" >> "West" >> "LOP_AA" >> "Infantry" >> "LOP_AA_Rifle_squad_ANP");
-};
-
-_soldiers = [[0,0,0], WEST, _squad] call BIS_fnc_spawnGroup;
+_soldiers = [[0,0,0], EAST, _squad] call BIS_fnc_spawnGroup;
 
 {_x assignAsCargo _vehicle; _x moveInCargo _vehicle;} forEach units _soldiers;
 

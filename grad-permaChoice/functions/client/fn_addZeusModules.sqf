@@ -1,3 +1,5 @@
+waitUntil {!isNull player};
+waitUntil {  time > 3 };
 if (
   !isNull (getAssignedCuratorLogic player) &&
   {isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")}
@@ -5,7 +7,8 @@ if (
 {
   // Note that the line below has to be uncommented if your mission is a Zeus Game Master mission.
   // TODO check if below is necessary to uncomment
-   // waitUntil {missionnamespace getvariable ["BIS_moduleMPTypeGameMaster_init", false] and {not isNil "ares_category_list"}};
+  waitUntil {not isNil "ares_category_list"};
+
   ["ATAKA", "Show List of DIE & SPECTATE Players",
   {
   	// Get all the passed parameters
@@ -13,7 +16,7 @@ if (
 
     private _spectatorList = missionNameSpace getVariable ["GRAD_permaChoice_spectatorList", []];
     private _stringify = str _spectatorList;
-  	[_stringify] call GRAD_permaChoice_fnc_showNotification;
+  	["AllSpectators", [_stringify]] call bis_fnc_showNotification;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -36,6 +39,21 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ATAKA", "Spawn Convoy",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [[
+      "mrk_convoy_1",
+      "mrk_convoy_2",
+      "mrk_convoy_3",
+      "mrk_convoy_4",
+      "mrk_convoy_5"
+    ]] remoteExec ["GRAD_convoy_fnc_start", 2];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
 
 
 
@@ -44,7 +62,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[east,["tsk_attack"],["Ruha angreifen und Feinde werfen.","Ruha angreifen","mrk_ruha"],[0,0,0],1,2,true, "attack"] call BIS_fnc_taskCreate;
+  	[[east,west,independent,civilian],["tsk_attack"],["Ruha angreifen und Feinde werfen.","Ruha angreifen","mrk_ruha"],[0,0,0],1,2,true, "attack"] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -74,7 +92,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[east,["tsk_defend"],["Ruha verteidigen und Gegenangriff abwehren.","Ruha halten","mrk_ruha"],[0,0,0],1,2,true, "defend"] call BIS_fnc_taskCreate;
+  	[[east,west,independent,civilian],["tsk_defend"],["Ruha verteidigen und Gegenangriff abwehren.","Ruha halten","mrk_ruha"],[0,0,0],1,2,true, "defend"] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 

@@ -6,9 +6,9 @@
 
 params ["_name"];
 
-["Default" ,["", _name]] call bis_fnc_showNotification;
+["SpectatorAscending" ,[_name]] call bis_fnc_showNotification;
 
 // add name to list to retreive later on
 private _allSpectators = missionNameSpace getVariable ["GRAD_permaChoice_spectatorList", []];
-_allSpectators pushback _name;
+_allSpectators pushback [_name];
 missionNameSpace setVariable ["GRAD_permaChoice_spectatorList", _allSpectators];

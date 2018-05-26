@@ -29,6 +29,11 @@ private _reinforcements = [
 
   	private _spawnedVehicle = [_type, _position, _dir, _initSkin, _initExtras, _cargo] call GRAD_reinforcements_fnc_spawnVehicle;
 
+  	private _cargoGroup = createGroup west;
+  	{
+  		[_cargoGroup, _x, [0,0,0], _spawnedVehicle] call GRAD_reinforcements_fnc_spawnUnit;
+  	} forEach _cargo;
+
 	{
 		_x addCuratorEditableObjects [[_spawnedVehicle],true];
 		nil

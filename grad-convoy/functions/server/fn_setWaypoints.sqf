@@ -8,7 +8,7 @@ params ["_group","_waypoints"];
 
 {
 	_wp = _group addWaypoint [_x, _foreachindex];
-	_wp setWaypointCompletionRadius 100;
+	_wp setWaypointCompletionRadius 10;
 	_wp setWaypointType "MOVE";
 	_wp setWaypointStatements ["true", ""];
 	

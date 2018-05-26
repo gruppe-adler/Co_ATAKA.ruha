@@ -8,3 +8,12 @@ enableSentences false;
 enableRadio false;
 showChat false;
 
+{
+	_x setMarkerAlphaLocal 0;
+} forEach [
+	"mrk_convoy_1",
+	"mrk_convoy_2",
+	"mrk_convoy_3",
+	"mrk_convoy_4",
+	"mrk_convoy_5"
+];

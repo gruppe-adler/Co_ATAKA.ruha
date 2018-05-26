@@ -1,15 +1,15 @@
 class grad_convoy {
 
 	class client {
-		  file = grad-permaChoice\functions\client;
+		  file = grad-convoy\functions\client;
   	};
 
 	class server {
-		  file = grad-permaChoice\functions\server;
+		  file = grad-convoy\functions\server;
 
 		  class addBombTruckProperties;
 		  class clearInventory;
-		  class convoyStart;
+		  class start;
 		  class fillCargoWithSoldiers;
 		  class setWaypoints;
 		  class spawnVehicles;

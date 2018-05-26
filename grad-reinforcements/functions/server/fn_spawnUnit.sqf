@@ -7,7 +7,7 @@ if (_isCargo) then {
 	_special = "CARGO";
 };
 
-private _unit = _group createUnit [_type, _position, "", 0, _special];
+private _unit = _group createUnit [_type, _position, [], 0, _special];
 
 {
 	_x addCuratorEditableObjects [[_unit],true];
