@@ -19,14 +19,19 @@ private _MG_team = [
 ];
 
 private _reinforcements = [
-	[_m2a2, [3283.03,3403.37,0], 30, _AT_team]
+	[_m2a2, [3296.85,3435.7,0], 30, _AT_team]
 ];
 
 
 {
-  	params ["_vehicle", "_position", "_dir", "_cargo"];
+  	_x params ["_vehicle", "_position", "_dir", "_cargo"];
   	_vehicle params ["_type", "_initSkin", "_initExtras"];
 
-  	[_type, _position, _dir, _initSkin, _initExtras, _cargo] call GRAD_reinforcements_fnc_spawnVehicle;
+  	private _spawnedVehicle = [_type, _position, _dir, _initSkin, _initExtras, _cargo] call GRAD_reinforcements_fnc_spawnVehicle;
+
+	{
+		_x addCuratorEditableObjects [[_spawnedVehicle],true];
+		nil
+	} count allCurators;  	
 
 } forEach _reinforcements;

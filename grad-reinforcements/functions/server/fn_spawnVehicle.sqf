@@ -1,6 +1,6 @@
 params ["_type", "_position", "_dir", "_initSkin", "_initExtras", "_cargo"];
 
-_veh = createVehicle [_type, _position, [], 0, "NONE"];
+private _veh = createVehicle [_type, _position, [], 0, "NONE"];
 [
 	_veh,
 	_initSkin, 
@@ -8,5 +8,7 @@ _veh = createVehicle [_type, _position, [], 0, "NONE"];
 ] call BIS_fnc_initVehicle;
 
 _veh setDir _dir;
+createVehicleCrew _veh;
+(group _veh) addVehicle _veh;
 
-group (leader (createVehicleCrew _veh)) addVehicle _veh;
+_veh

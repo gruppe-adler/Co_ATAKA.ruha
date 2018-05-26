@@ -7,3 +7,4 @@ RHSDecalsOff = true;
 enableSentences false;
 enableRadio false;
 showChat false;
+

@@ -8,3 +8,8 @@ if (_isCargo) then {
 };
 
 private _unit = _group createUnit [_type, _position, "", 0, _special];
+
+{
+	_x addCuratorEditableObjects [[_unit],true];
+	nil
+} count allCurators;

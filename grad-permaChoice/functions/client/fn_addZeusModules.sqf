@@ -5,14 +5,15 @@ if (
 {
   // Note that the line below has to be uncommented if your mission is a Zeus Game Master mission.
   // TODO check if below is necessary to uncomment
-  // waitUntil {missionnamespace getvariable ["BIS_moduleMPTypeGameMaster_init", false] and {not isNil "ares_category_list"}};
+   // waitUntil {missionnamespace getvariable ["BIS_moduleMPTypeGameMaster_init", false] and {not isNil "ares_category_list"}};
   ["ATAKA", "Show List of DIE & SPECTATE Players",
   {
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     private _spectatorList = missionNameSpace getVariable ["GRAD_permaChoice_spectatorList", []];
-  	[str _spectatorList] call GRAD_permaChoice_fnc_showNotification;
+    private _stringify = str _spectatorList;
+  	[_stringify] call GRAD_permaChoice_fnc_showNotification;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -31,7 +32,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[""] remoteExec ["GRAD_convoy_fnc_convoyStart", 2];
+  	[""] remoteExec ["GRAD_reinforcements_fnc_init", 2];
 
   }] call Ares_fnc_RegisterCustomModule;
 

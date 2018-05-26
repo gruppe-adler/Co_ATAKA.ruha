@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=662;
+		nextID=666;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2316.4226,65.987274,1736.4216};
-		dir[]={-0.74130684,-0.56789774,0.35771158};
-		up[]={-0.51146615,0.82309681,0.24680357};
-		aside[]={0.43459052,1.1252996e-007,0.90062767};
+		pos[]={3328.989,49.67535,3396.9097};
+		dir[]={-0.27886498,-0.64046669,0.71557289};
+		up[]={-0.23255983,0.76798362,0.59675282};
+		aside[]={0.93174905,-2.5174813e-008,0.36311042};
 	};
 };
 binarizationWanted=0;
@@ -58,13 +58,14 @@ addons[]=
 	"ace_medical",
 	"po_factions_fic",
 	"rhs_c_bmp",
-	"RHS_US_A2Port_Armor"
+	"RHS_US_A2Port_Armor",
+	"A3_Data_F_Curator_Virtual"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			className="rhs_c_a2port_car";
@@ -272,6 +273,13 @@ class AddonsMetaData
 			name="M2 Bradley IFV";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item32
+		{
+			className="A3_Data_F_Curator";
+			name="Arma 3 Zeus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -636,7 +644,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=135;
+		items=136;
 		class Item0
 		{
 			dataType="Object";
@@ -3660,7 +3668,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3960.6284,9.7334042,4678.3892};
+				position[]={3960.6279,9.7334137,4678.3892};
 			};
 			id=235;
 			type="ModuleCuratorAddEditableObjects";
@@ -3697,7 +3705,7 @@ class Mission
 							{
 								type[]=
 								{
-									"SCALAR"
+									"BOOL"
 								};
 							};
 							value=1;
@@ -3734,7 +3742,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="grad_gamemaster";
 						};
 					};
 				};
@@ -3803,11 +3811,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4051.7144,0,4705.957};
+				position[]={4051.7141,0.00026939809,4705.957};
 			};
 			id=238;
 			type="ModuleCuratorSetCoefs_F";
-			atlOffset=-0.15218475;
+			atlOffset=-0.152;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3825,7 +3833,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=-1e+010;
+							value=0;
 						};
 					};
 				};
@@ -3863,7 +3871,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=-1e+010;
+							value=0;
 						};
 					};
 				};
@@ -3920,7 +3928,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=-1e+010;
+							value=0;
 						};
 					};
 				};
@@ -4164,7 +4172,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=-1e+010;
+							value=0;
 						};
 					};
 				};
@@ -10192,7 +10200,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3289.168,9.3737078,3417.6914};
+						position[]={3289.6116,9.360796,3419.5986};
 						angles[]={0.0075011365,0.46947861,6.2806959};
 					};
 					side="West";
@@ -10202,14 +10210,13 @@ class Mission
 					};
 					id=632;
 					type="rhsusf_army_ucp_crewman";
-					atlOffset=-0.0025014877;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3289.168,9.3737078,3417.6914};
+						position[]={3289.6116,9.360796,3419.5986};
 						angles[]={0.0075011365,0.46947861,6.2806959};
 					};
 					side="West";
@@ -10219,14 +10226,13 @@ class Mission
 					};
 					id=633;
 					type="rhsusf_army_ucp_crewman";
-					atlOffset=-0.0025014877;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3289.168,9.3737078,3417.6914};
+						position[]={3289.6116,9.360796,3419.5986};
 						angles[]={0.0075011365,0.46947861,6.2806959};
 					};
 					side="West";
@@ -10236,7 +10242,6 @@ class Mission
 					};
 					id=634;
 					type="rhsusf_army_ucp_crewman";
-					atlOffset=-0.0025014877;
 				};
 			};
 			class Attributes
@@ -10286,14 +10291,13 @@ class Mission
 				};
 			};
 			id=631;
-			atlOffset=-0.0025014877;
 		};
 		class Item126
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3289.1724,11.166923,3417.6548};
+				position[]={3289.616,11.154011,3419.562};
 				angles[]={0.0075011365,0.46947861,6.2806959};
 			};
 			side="West";
@@ -10303,7 +10307,6 @@ class Mission
 			};
 			id=635;
 			type="RHS_M2A2_BUSKI_WD";
-			atlOffset=-0.0025014877;
 		};
 		class Item127
 		{
@@ -10576,6 +10579,7 @@ class Mission
 					};
 					id=653;
 					type="rhsusf_usmc_marpat_wd_autorifleman";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
@@ -10752,6 +10756,19 @@ class Mission
 			id=661;
 			type="rhsusf_m998_w_s_2dr_fulltop";
 			atlOffset=-0.0074987411;
+		};
+		class Item135
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4008.7051,5.7765384,4829.5};
+				angles[]={6.2756805,0,0.0075049158};
+			};
+			name="grad_gamemaster";
+			isPlayable=1;
+			id=663;
+			type="B_VirtualCurator_F";
 		};
 	};
 	class Connections
