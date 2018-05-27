@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=707;
+		nextID=725;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3255.9092,21.713623,3380.032};
-		dir[]={0.022864796,-0.3303262,-0.94359577};
-		up[]={0.0080020381,0.94386637,-0.33023509};
-		aside[]={-0.99971044,-8.7587978e-008,-0.02422392};
+		pos[]={4963.2554,89.803589,5601.6577};
+		dir[]={-0.56760395,-0.49817187,-0.65549058};
+		up[]={-0.32610855,0.86707646,-0.37660274};
+		aside[]={-0.75597435,-1.1757948e-007,0.65461415};
 	};
 };
 binarizationWanted=0;
@@ -55,13 +55,18 @@ addons[]=
 	"rhs_c_tanks",
 	"ace_medical",
 	"rhs_c_bmp",
-	"rds_a2port_cman"
+	"rds_a2port_cman",
+	"rhs_c_weapons",
+	"CUP_CASigns2",
+	"A3_Structures_F_Argo_Decals_Horizontal",
+	"A3_Structures_F_Civ_InfoBoards",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=33;
 		class Item0
 		{
 			className="rhs_c_a2port_car";
@@ -252,6 +257,30 @@ class AddonsMetaData
 			name="RDS Civilian Pack Characters";
 			author="reyhard";
 			url="https://forums.bistudio.com/topic/170165-rds-a2-civilian-pack/";
+		};
+		class Item29
+		{
+			className="rhs_c_weapons";
+			name="AFRF Weapons Pack";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item30
+		{
+			className="CUP_CASigns2";
+			name="CUP_CASigns2";
+		};
+		class Item31
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item32
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -616,7 +645,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=129;
+		items=140;
 		class Item0
 		{
 			dataType="Object";
@@ -2809,26 +2838,26 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""pic/finland.paa"";}";
 			};
 			id=174;
 			type="Flag_US_F";
-			atlOffset=4.7683716e-007;
 		};
 		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4316.4873,9.7868042,4803.3921};
+				position[]={4316.4868,9.7868042,4803.3921};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="call{this setFlagTexture ""pic/finland.paa"";}";
 			};
 			id=175;
 			type="Flag_US_F";
-			atlOffset=-4.7683716e-007;
 		};
 		class Item10
 		{
@@ -10135,6 +10164,226 @@ class Mission
 				};
 				nAttributes=7;
 			};
+		};
+		class Item129
+		{
+			dataType="Trigger";
+			position[]={3244.8196,10.802746,3349.3716};
+			class Attributes
+			{
+				sizeA=0;
+				sizeB=0;
+			};
+			id=707;
+			type="EmptyDetector";
+			atlOffset=-1.9073486e-006;
+		};
+		class Item130
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5904.7183,6.3136997,7930.8081};
+				angles[]={0.0024958209,3.0717795,6.2806892};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=709;
+			type="rhs_gear_crate";
+			atlOffset=-4.7683716e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[""tf_fadak""],[40]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item131
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5907.2837,10.010359,7931.2944};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=710;
+			type="rhs_Flag_Russia_F";
+		};
+		class Item132
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5905.9009,10.04779,7909.3086};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=711;
+			type="rhs_Flag_Russia_F";
+		};
+		class Item133
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5910.3569,10.02854,7941.1465};
+				angles[]={0,4.625123,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=715;
+			type="Land_sign_ulgano";
+			atlOffset=3.1176705;
+		};
+		class Item134
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5934.9072,5.9054642,7932.3467};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=718;
+			type="Land_Puddle_01_F";
+		};
+		class Item135
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5936.5923,5.8955588,7931.3853};
+				angles[]={-0,0,6.2756844};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=719;
+			type="Land_ClutterCutter_medium_F";
+			atlOffset=9.5367432e-007;
+		};
+		class Item136
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4258.9878,9.0299702,4858.5229};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setFlagTexture ""pic/finland.paa"";}";
+			};
+			id=720;
+			type="Flag_US_F";
+			atlOffset=-0.073999882;
+		};
+		class Item137
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4888.9082,13.049747,5508.0898};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setFlagTexture ""pic/finland.paa"";}";
+			};
+			id=721;
+			type="Flag_US_F";
+			atlOffset=-0.0080003738;
+		};
+		class Item138
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4904.0464,10.72936,5506.0117};
+				angles[]={0,3.4382992,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=722;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="pic\finnish_border_sign.jpg";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item139
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4890.7402,9.6028471,5515.6089};
+				angles[]={0.019996032,0.52359879,0.06988623};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=723;
+			type="Wire";
 		};
 	};
 	class Connections

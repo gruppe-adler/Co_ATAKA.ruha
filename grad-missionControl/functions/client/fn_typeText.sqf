@@ -21,9 +21,9 @@
 	] spawn BIS_fnc_typeText;
 */
 
-#define DELAY_CHARACTER	0.5;
-#define DELAY_CURSOR	0.01;
-#define DELAY_BLOCK 2;
+DELAY_CHARACTER	= 1;
+DELAY_CURSOR = 0;
+DELAY_BLOCK = 2;
 
 private["_data","_posX","_posY","_rootFormat","_toDisplay"];
 private["_blocks","_block","_blockCount","_blockNr","_blockArray","_blockText","_blockTextF","_blockTextF_","_blockFormat","_formats","_inputData","_processedTextF","_char","_cursorInvis","_blinkCounts","_blinkCount"];
@@ -69,6 +69,21 @@ _processedTextF  = "";
 	_blockText   = "";
 	_blockTextF  = "";
 	_blockTextF_ = "";
+	private _skipSound = false;
+
+	if (_blockNr > 0) then {
+		DELAY_CHARACTER = 0.05;
+	};
+	if (_blockNr isEqualTo 1) then {
+		DELAY_CHARACTER = 0;
+		DELAY_CURSOR = 0;
+		_skipSound = true;
+	};
+	if (_blockNr isEqualTo 2) then {
+		DELAY_CHARACTER = 0.05;
+		DELAY_CURSOR = 0;
+		_skipSound = true;
+	};
 
 	{
 		_char = _x;
@@ -76,18 +91,25 @@ _processedTextF  = "";
 		_blockText = _blockText + _char;
 
 		_blockTextF  = format[_blockFormat, _blockText + _invisCursor];
-		_blockTextF_ = format[_blockFormat, _blockText + "_"];
+		_blockTextF_ = format[_blockFormat, _blockText + _invisCursor];
 
 		//print the output
 		_toDisplay = format[_rootFormat,_processedTextF + _blockTextF_];
 		[_toDisplay, _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;
 
 
-		sleep DELAY_CHARACTER;
-		playSound (selectRandom ["ACE_heartbeat_slow_1","ACE_heartbeat_slow_2"]);
+		
+		if (!(_char isEqualTo " ")) then {
+			if (!_skipSound) then {
+				playSound (selectRandom ["GRAD_heartbeat_slow_1","GRAD_heartbeat_slow_2"]);
+			};
+			sleep DELAY_CHARACTER;
+		};
 		_toDisplay = format[_rootFormat,_processedTextF + _blockTextF];
 		[_toDisplay, _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;
-		sleep DELAY_CURSOR;
+		if (!(_char isEqualTo " ")) then {
+			sleep DELAY_CURSOR;
+		};
 	}
 	forEach _blockArray;
 
@@ -113,6 +135,13 @@ _processedTextF  = "";
 	_processedTextF  = _processedTextF + _blockTextF;
 }
 forEach _blocks;
+
+_display = uinamespace getvariable "BIS_dynamicText";
+_control = _display displayctrl 9999;
+_control ctrlsetfade 0;
+_control ctrlcommit 15;
+
+sleep 15;
 
 //clean the screen
 ["", _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;

@@ -1,3 +1,4 @@
+cutText ["","BLACK FADED",999];
 ["BLU_F", "UsMPT"] call GRAD_Loadout_fnc_FactionSetLoadout;
 ["OPF_F", "RuFlora"] call GRAD_Loadout_fnc_FactionSetLoadout;
 
@@ -17,3 +18,7 @@ showChat false;
 	"mrk_convoy_4",
 	"mrk_convoy_5"
 ];
+
+waitUntil {!isNull player};
+waitUntil {time > 0};
+[] spawn GRAD_missionControl_fnc_intro;

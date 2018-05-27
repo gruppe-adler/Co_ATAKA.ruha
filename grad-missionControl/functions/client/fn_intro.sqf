@@ -6,9 +6,6 @@ startFog=0.041335065;
 startFogDecay=0.1;
 startFogBase=30.393677;
 */
-0 setFog [0.04,0.1,60];
-
-40 setFog [0.04,0.1,31];
 
 // camera stuff is async
 [] spawn {
@@ -33,10 +30,10 @@ startFogBase=30.393677;
 	sleep 42; // still moving forward while turning on player
 	_camera camSetTarget player;
 	_camera camCommit 3;
-	sleep 2;
-	_camera camSetPos (getPos player);
-	_camera camCommit 7;
-	sleep 6;
+	sleep 3;
+	_camera camSetPos [getPos player select 0, getPos player select 1, 1.7];
+	_camera camCommit 10;
+	sleep 9;
 	cutText ["", "BLACK OUT", 1];
 	sleep 0.5;
 	_filmgrain ppEffectEnable false;   
@@ -54,22 +51,24 @@ cutText ["", "BLACK IN", 10];
 
 playMusic "LeadTrack02_F_Tank";
 
-
+sleep 14;
 [  
  [  
-  ["C O   A T A K A","<t align = 'center' shadow = '0' size = '3.5' color='#CC8f1167' font='EtelkaNarrowMediumPro'>%1</t>"],
+  ["C O   A T A K A","<t align = 'center' shadow = '0' size = '3.5' color='#ff8f1167' font='EtelkaNarrowMediumPro'>%1</t>"],
   ["<br/>","<t color='#00000000' align = 'center' shadow = '0' size = '1.5' font='EtelkaNarrowMediumPro'>%1</t>"],
   ["<br/>by nomisum for Gruppe Adler","<t align = 'center' shadow = '0' color='#66000000' font='EtelkaNarrowMediumPro' size = '.5'>%1</t>"]
  ]  
 ] spawn grad_missionControl_fnc_typeText;
 
 
-sleep 28;
+sleep 22;
 
 
 [ "Im Morgengrauen", format ["25.07.1987"]] spawn BIS_fnc_infoText;
 
-sleep 4;
+sleep 10;
 
 INTRO_DONE = true;
 publicVariable "INTRO_DONE";
+
+7 fadeMusic 0;
