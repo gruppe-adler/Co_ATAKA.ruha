@@ -10,6 +10,8 @@ respawnDialog = 0;
 respawnButton = 0;
 
 loadScreen = "pic\loading.jpg";
+OnLoadName    = "CO ATAKA";
+OnLoadMission = "Russian Forces on the move.";
 
 class Header
 {

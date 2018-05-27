@@ -54,6 +54,23 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ATAKA", "Display Mission End SUCCESS",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [true,true,true] remoteExec ["GRAD_missionControl_fnc_endMission", [0,-2] select isDedicated];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+   ["ATAKA", "Display Mission End FAIL",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [true,true,true] remoteExec ["GRAD_missionControl_fnc_endMission", [0,-2] select isDedicated];
+
+  }] call Ares_fnc_RegisterCustomModule;
 
 
 

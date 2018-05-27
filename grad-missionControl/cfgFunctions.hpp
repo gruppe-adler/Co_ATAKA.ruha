@@ -4,5 +4,6 @@ class grad_missionControl {
 		  file = grad-missionControl\functions\server;
 
       class checkRetreat {postInit = 1;};
+      class endMission;
   };
 };

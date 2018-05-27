@@ -4,6 +4,18 @@ private _m2a2 = [
 	["IFF_Panels_Hide",1,"Select_TOW",0,"Select_Stinger",1]
 ];
 
+private _hmmwv = [
+	"rhsusf_m998_w_s_2dr_fulltop",
+	["Olive",1],
+	["hide_middleTop",0,"hide_CIP",1,"hide_BFT",1,"hide_Antenna",1,"hide_A2_Parts",1,"Hide_A2Bumper",1]
+];
+
+private _m1a1 = [
+	"rhsusf_m1a1fep_wd",
+	["OD",1], 
+	["DUKE_Hide",1,"IFF_Panels_Hide",1,"Miles_Hide",0,"showCamonetTurret",0,"showCamonetHull",0]
+];
+
 private _AT_team = [
 	"rhsusf_usmc_marpat_wd_teamleader",
 	"rhsusf_usmc_marpat_wd_rifleman_m4",
@@ -19,7 +31,9 @@ private _MG_team = [
 ];
 
 private _reinforcements = [
-	[_m2a2, [3296.85,3435.7,0], 30, _AT_team]
+	[_m2a2, [3296.85,3435.7,0], 30, _AT_team],
+	[rhsusf_m998_w_s_2dr_fulltop, [3296.85,3455.7,0], 30, _MG_team],
+	[_m1a1, [3296.85,3475.7,0], 30, []]
 ];
 
 
