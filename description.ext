@@ -80,3 +80,13 @@ class CfgNotifications {
       difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
     };
 };
+
+
+class CfgTaskTypes
+{
+   class joinHere
+   {
+       icon     = \A3\ui_f\data\igui\cfg\cursors\iconJoin_ca.paa;
+       icon3D   = \A3\ui_f\data\igui\cfg\cursors\iconJoin_ca.paa;
+   };
+};

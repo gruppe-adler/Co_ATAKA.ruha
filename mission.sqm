@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=705;
+		nextID=706;
 	};
 	class MarkerIDProvider
 	{
@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={3255.9092,21.713623,3380.032};
-		dir[]={0.028510163,-0.4386569,-0.89820772};
-		up[]={0.013916736,0.89865303,-0.43844113};
-		aside[]={-0.99949944,-3.8779035e-008,-0.031724811};
+		dir[]={0.022864796,-0.3303262,-0.94359577};
+		up[]={0.0080020381,0.94386637,-0.33023509};
+		aside[]={-0.99971044,-8.7587978e-008,-0.02422392};
 	};
 };
 binarizationWanted=0;
@@ -616,7 +616,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=130;
+		items=129;
 		class Item0
 		{
 			dataType="Object";
@@ -9540,16 +9540,6 @@ class Mission
 		class Item120
 		{
 			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=636;
-			atlOffset=-19.1425;
-		};
-		class Item121
-		{
-			dataType="Group";
 			side="Civilian";
 			class Entities
 			{
@@ -9637,7 +9627,7 @@ class Mission
 			};
 			id=666;
 		};
-		class Item122
+		class Item121
 		{
 			dataType="Marker";
 			position[]={6087.4487,3.4375646,7869.8418};
@@ -9646,7 +9636,7 @@ class Mission
 			angle=183.23093;
 			id=668;
 		};
-		class Item123
+		class Item122
 		{
 			dataType="Marker";
 			position[]={5854.5264,2.3733146,7237.0615};
@@ -9656,7 +9646,7 @@ class Mission
 			id=669;
 			atlOffset=0.0078287125;
 		};
-		class Item124
+		class Item123
 		{
 			dataType="Marker";
 			position[]={3564.1938,6.8003974,4017.1367};
@@ -9666,7 +9656,7 @@ class Mission
 			id=670;
 			atlOffset=0.00039720535;
 		};
-		class Item125
+		class Item124
 		{
 			dataType="Marker";
 			position[]={2314.4873,14.984516,2413.8521};
@@ -9676,7 +9666,7 @@ class Mission
 			id=671;
 			atlOffset=-0.00085353851;
 		};
-		class Item126
+		class Item125
 		{
 			dataType="Marker";
 			position[]={1192.5842,10.917702,79.296875};
@@ -9686,7 +9676,7 @@ class Mission
 			id=672;
 			atlOffset=0.018270493;
 		};
-		class Item127
+		class Item126
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9839,7 +9829,7 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item128
+		class Item127
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9993,7 +9983,7 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item129
+		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
