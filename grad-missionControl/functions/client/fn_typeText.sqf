@@ -21,9 +21,9 @@
 	] spawn BIS_fnc_typeText;
 */
 
-#define DELAY_CHARACTER	0.06;
+#define DELAY_CHARACTER	0.5;
 #define DELAY_CURSOR	0.01;
-#define DELAY_BLOCK 3;
+#define DELAY_BLOCK 2;
 
 private["_data","_posX","_posY","_rootFormat","_toDisplay"];
 private["_blocks","_block","_blockCount","_blockNr","_blockArray","_blockText","_blockTextF","_blockTextF_","_blockFormat","_formats","_inputData","_processedTextF","_char","_cursorInvis","_blinkCounts","_blinkCount"];
@@ -82,14 +82,16 @@ _processedTextF  = "";
 		_toDisplay = format[_rootFormat,_processedTextF + _blockTextF_];
 		[_toDisplay, _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;
 
-		playSound "ReadoutClick";
 
 		sleep DELAY_CHARACTER;
+		playSound (selectRandom ["ACE_heartbeat_slow_1","ACE_heartbeat_slow_2"]);
 		_toDisplay = format[_rootFormat,_processedTextF + _blockTextF];
 		[_toDisplay, _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;
 		sleep DELAY_CURSOR;
 	}
 	forEach _blockArray;
+
+
 
 	_blinkCount = _blinkCounts select _forEachIndex;
 

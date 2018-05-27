@@ -57,9 +57,9 @@ playMusic "LeadTrack02_F_Tank";
 
 [  
  [  
-  ["C O   A T A K A","<t align = 'center' shadow = '0' size = '3.5' color='#CC8f1167' font='EtelkaNarrowMediumPro'>%1</t>"],  
-  ["<br/>","<t color='#00000000' align = 'center' shadow = '0' size = '1.5' font='EtelkaNarrowMediumPro'>%1</t>"], 
-  ["<br/>by nomisum for Gruppe Adler","<t align = 'center' shadow = '0' color='#66000000' font='EtelkaNarrowMediumPro' size = '.5'>%1</t>"]  
+  ["C O   A T A K A","<t align = 'center' shadow = '0' size = '3.5' color='#CC8f1167' font='EtelkaNarrowMediumPro'>%1</t>"],
+  ["<br/>","<t color='#00000000' align = 'center' shadow = '0' size = '1.5' font='EtelkaNarrowMediumPro'>%1</t>"],
+  ["<br/>by nomisum for Gruppe Adler","<t align = 'center' shadow = '0' color='#66000000' font='EtelkaNarrowMediumPro' size = '.5'>%1</t>"]
  ]  
 ] spawn grad_missionControl_fnc_typeText;
 
