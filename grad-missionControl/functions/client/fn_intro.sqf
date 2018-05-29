@@ -71,4 +71,4 @@ sleep 10;
 INTRO_DONE = true;
 publicVariable "INTRO_DONE";
 
-7 fadeMusic 0;
+7 fadeMusic 0.25;
