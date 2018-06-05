@@ -31,9 +31,14 @@ private _MG_team = [
 ];
 
 private _reinforcements = [
-	[_m2a2, [3296.85,3435.7,0], 30, _AT_team],
-	[rhsusf_m998_w_s_2dr_fulltop, [3296.85,3455.7,0], 30, _MG_team],
-	[_m1a1, [3296.85,3475.7,0], 30, []]
+	[_m2a2, getPos reinf_1, getDir reinf_1, _AT_team],
+	[_hmmwv, getPos reinf_2, getDir reinf_2, _MG_team],
+	[_hmmwv, getPos reinf_3, getDir reinf_2, _AT_team],
+	[_hmmwv, getPos reinf_4, getDir reinf_2, _MG_team],
+	[_hmmwv, getPos reinf_5, getDir reinf_2, _AT_team],
+	[_hmmwv, getPos reinf_6, getDir reinf_2, _MG_team],
+	[_hmmwv, getPos reinf_7, getDir reinf_2, _AT_team],
+	[_m1a1, getPos reinf_3, getDir reinf_8, []]
 ];
 
 
@@ -44,6 +49,7 @@ private _reinforcements = [
   	private _spawnedVehicle = [_type, _position, _dir, _initSkin, _initExtras, _cargo] call GRAD_reinforcements_fnc_spawnVehicle;
 
   	private _cargoGroup = createGroup west;
+  	
   	{
   		[_cargoGroup, _x, [0,0,0], _spawnedVehicle] call GRAD_reinforcements_fnc_spawnUnit;
   	} forEach _cargo;

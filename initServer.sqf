@@ -8,10 +8,11 @@
 	_x setSkill ["endurance", 0.6]; 
 	_x setSkill ["spotDistance", 1]; 
 	_x setSkill ["spotTime", 0.9]; 
-	_x setSkill ["spottingTime", 1]; 
 	_x setSkill ["courage", 1]; 
 	_x setSkill ["reloadSpeed", 1]; 
 	_x setSkill ["commanding", 1];
 	_x setSkill ["general", 1];
 
 } forEach allUnits;
+
+["Initialize", [true]] call BIS_fnc_dynamicGroups;

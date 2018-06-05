@@ -8,6 +8,7 @@ if (_isCargo) then {
 };
 
 private _unit = _group createUnit [_type, _position, [], 0, _special];
+_unit moveInCargo _vehicle;
 
 {
 	_x addCuratorEditableObjects [[_unit],true];
