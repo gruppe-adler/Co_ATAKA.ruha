@@ -14,3 +14,13 @@ _unit moveInCargo _vehicle;
 	_x addCuratorEditableObjects [[_unit],true];
 	nil
 } count allCurators;
+
+_unit setSkill ["aimingShake", 0.2]; 
+_unit setSkill ["aimingSpeed", 0.9]; 
+_unit setSkill ["endurance", 0.6]; 
+_unit setSkill ["spotDistance", 1]; 
+_unit setSkill ["spotTime", 0.9]; 
+_unit setSkill ["courage", 1]; 
+_unit setSkill ["reloadSpeed", 1]; 
+_unit setSkill ["commanding", 1];
+_unit setSkill ["general", 1];

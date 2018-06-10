@@ -57,6 +57,8 @@ private _reinforcements = [
 	{
 		_x addCuratorEditableObjects [[_spawnedVehicle],true];
 		nil
-	} count allCurators;  	
+	} count allCurators;
+
+	sleep 3;
 
 } forEach _reinforcements;
